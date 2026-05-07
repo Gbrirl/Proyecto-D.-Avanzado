@@ -17,14 +17,14 @@ class Cafe {
     }
 }
 
-// Ejemplo de uso
+// uso
 const productos = [
     new Cafe("Espresso Reserve", 4.50, "Caliente", "Intenso y aromático"),
     new Cafe("Cold Brew", 5.50, "Frío", "Suave y refrescante"),
     new Cafe("Cappuccino Moran", 5.50, "Caliente", "Crema perfecta")
 ];
 
-// Carrito simple con POO
+
 class Carrito {
     constructor() {
         this.items = [];
@@ -42,7 +42,7 @@ class Carrito {
 
 const carrito = new Carrito();
 
-// Ejemplo: Agregar productos al carrito
+
 productos.forEach(p => carrito.agregarProducto(p));
 console.log("Total carrito: $" + carrito.total().toFixed(2));
 '''
