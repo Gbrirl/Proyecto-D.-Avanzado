@@ -1,0 +1,417 @@
+
+/* ====================== 
+   STYLE.CSS - MORAN RESERVE
+   ====================== */
+
+:root {
+    --primary: #d4af37;     /* Dorado premium */
+    --dark: #1a1a1a;
+    --light: #f8f1e9;
+    --brown: #8c5a2b;
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--dark) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* Hero Section - Index */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), 
+                      url('https://kimi-web-img.moonshot.cn/img/img.freepik.com/63f01fdd3eaa2ab57b7dd8ce3a6c9e2c7543345c.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Section - Nosotros */
+.about-hero {
+    height: 50vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                      url('https://kimi-web-img.moonshot.cn/img/img.freepik.com/63f01fdd3eaa2ab57b7dd8ce3a6c9e2c7543345c.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 56px;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+/* Hero Section - Galeria */
+.gallery-hero {
+    height: 40vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                      url('https://kimi-web-img.moonshot.cn/img/img.freepik.com/63f01fdd3eaa2ab57b7dd8ce3a6c9e2c7543345c.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 56px;
+}
+
+/* Hero Section - Contacto */
+.contact-hero {
+    height: 45vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('https://source.unsplash.com/1920x1080/?coffee-shop-interior');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+/* Botones */
+.btn-warning {
+    background-color: var(--primary);
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-warning:hover {
+    background-color: #c19a2e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-custom {
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    transition: all 0.4s;
+}
+
+.btn-custom:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+}
+
+/* Cards */
+.card {
+    transition: all 0.4s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Cards - Menu */
+.product-card {
+    transition: all 0.4s ease;
+    border: none;
+    overflow: hidden;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.category-title {
+    font-size: 1.9rem;
+    border-bottom: 3px solid #d4af37;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+}
+
+/* Gallery */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h5 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.gallery-overlay p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Map Container */
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #d4af37, #6F4E37);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #d4af37;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px #d4af37;
+}
+
+.timeline-year {
+    color: #d4af37;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Value Cards */
+.value-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    border-bottom-color: #d4af37;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #d4af37, #b8960c);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* Logo Showcase */
+.logo-showcase {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+/* Stats Section */
+.stats-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #d4af37;
+    line-height: 1;
+}
+
+.stat-label {
+    color: #aaa;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    border-left: 4px solid #d4af37;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.stars {
+    color: #d4af37;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: #ddd;
+}
+
+footer a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--primary);
+}
+
+/* Utilidades */
+.text-gold {
+    color: var(--primary);
+}
+
+.bg-cream {
+    background-color: #faf8f5;
+}
+
+.bg-coffee {
+    background-color: #f5f0e8;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: var(--primary);
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section {
+    scroll-margin-top: 80px;
+}
+
+/* Formulario */
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    h1.display-3 {
+        font-size: 2.8rem;
+    }
+    
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
